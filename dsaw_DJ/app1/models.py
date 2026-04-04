@@ -22,3 +22,4 @@ class Person(models.Model):
     updatedAt = models.DateTimeField(auto_now=True)
     rol = models.CharField(max_length=30, choices=Rol.choices) ####
     document = models.CharField(max_length=15, choices=Doc.choices) ####
+    numDoc = models.CharField(max_length=9)
