@@ -1,0 +1,27 @@
+<!--toda la info de un usuario-->
+{% extends 'main_general.html' %}
+
+{% block content %}
+    <h1>Llista d'usuaris</h1>
+    <a href="/app1/users/rols/all">
+            <button>TORNAR</button>
+    </a>
+        <ul>
+            {% for persona in msg %}
+            <li>ID: {{ persona.id }}</li>
+            <li>Nombre: {{ persona.nombre }}</li>
+            <li>Telefon: {{persona.telefon }} </li>
+            <li>Email: {{ persona.email }}</li>
+            <li>Any naixement: {{persona.dataNaix}} </li>
+            <li>Codi postal: {{persona.codiPostal}} </li>
+            <li>Rol: {{persona.rol}} </li>
+            <li>Document: {{persona.document}} </li>
+            <li>Data de creació: {{persona.createdAt}} </li>
+            <li>Data de la última actualització: {{persona.updatedAt}} </li>
+            <a href="/app1/updateUser/{{ persona.id }}">EDITAR</a>
+            <a href="/app1/deleteUser/{{ persona.id }}">BORRAR</a>
+            <br>
+            <br>
+            {% endfor %}
+        </ul>
+{% endblock %}

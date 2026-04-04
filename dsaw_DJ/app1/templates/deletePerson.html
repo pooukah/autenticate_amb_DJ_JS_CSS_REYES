@@ -1,0 +1,14 @@
+<!--para borrar persona-->
+{% extends 'main_general.html' %}
+
+{% block content %}
+<h1>CONFIRMACIÓ ELIMINACIÓ PERSONA</h1>
+<a href="/app1/users/rols/all">
+    <button>TORNAR</button>
+</a>
+<form method="POST">
+    {% csrf_token %}
+    <p>Segur que vols eliminar a {{ person.nom }}</p>
+    <input type="submit" value="CONFIRMAR">
+</form>
+{% endblock %}

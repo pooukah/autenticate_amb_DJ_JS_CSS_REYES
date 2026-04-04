@@ -1,0 +1,31 @@
+<!--pagina para logearse-->
+{% extends 'main_general.html' %}
+{% block content %}
+<h1>Iniciar Sessió</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ formulari }}
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <input type="submit" value="INCIAR SESSIÓ">
+</form>
+<br>
+{% endblock %}
+
+
+
+
+
+<!--<label>Email:</label>-->
+<!--    <br>-->
+<!--    <input type="text" id="email" name="email" placeholder="exemple@gmail.com">-->
+<!--    <br><br>-->
+
+<!--    <label>Contrasenya:</label>-->
+<!--    <br>-->
+<!--    <input type="password" id="password" name="password" placeholder="********">-->
+<!--    <br><br>-->
+
+<!--    <input type="submit" value="INICIAR SESSIÓ">-->
