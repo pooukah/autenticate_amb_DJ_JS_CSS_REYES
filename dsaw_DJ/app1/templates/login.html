@@ -1,5 +1,6 @@
 <!--pagina para logearse-->
 {% extends 'main_general.html' %}
+{% load static %}
 {% block content %}
 <h1>Iniciar Sessió</h1>
 
@@ -13,19 +14,9 @@
 </form>
 <br>
 {% endblock %}
+{% block scripts %}
+<script src="{% static 'scripts/login.js' %}"></script>
+{% endblock %}
 
 
 
-
-
-<!--<label>Email:</label>-->
-<!--    <br>-->
-<!--    <input type="text" id="email" name="email" placeholder="exemple@gmail.com">-->
-<!--    <br><br>-->
-
-<!--    <label>Contrasenya:</label>-->
-<!--    <br>-->
-<!--    <input type="password" id="password" name="password" placeholder="********">-->
-<!--    <br><br>-->
-
-<!--    <input type="submit" value="INICIAR SESSIÓ">-->
