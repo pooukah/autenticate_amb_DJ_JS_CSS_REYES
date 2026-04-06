@@ -136,6 +136,7 @@ input:focus, select:focus, button:focus {
     margin: 0 5px;
     border: none;
     cursor: pointer;
+    width: auto;  /* ← Esto hace que sean del tamaño normal */
 }
 
 .botones-rols button:hover {

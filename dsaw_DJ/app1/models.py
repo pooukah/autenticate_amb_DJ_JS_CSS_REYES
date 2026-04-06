@@ -15,8 +15,8 @@ class Person(models.Model):
     nom = models.CharField(max_length=30) ####
     email = models.CharField(max_length=50) ####
     dataNaix = models.DateField() ####
-    telefon = models.IntegerField() ####
-    codiPostal = models.IntegerField() ####
+    telefon = models.CharField(max_length=9) ####
+    codiPostal = models.CharField(max_length=5) ####
     password = models.CharField(max_length=20) # NO
     createdAt = models.DateTimeField(auto_now_add=True) ###
     updatedAt = models.DateTimeField(auto_now=True)

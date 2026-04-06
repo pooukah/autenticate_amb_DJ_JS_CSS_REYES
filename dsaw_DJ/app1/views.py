@@ -31,12 +31,16 @@ def login(request):
 # 3. UPDATE
 def update_person(request, pk):
     person_id = Person.objects.get(id=pk)
-    form = PersonForm(instance=person_id)
     if request.method == "POST":
         form = PersonForm(request.POST, instance=person_id)
         if form.is_valid():
             form.save()
             return redirect('rols', roltype='all')
+    else:
+        form = PersonForm(instance=person_id)
+        if person_id.dataNaix:
+            fecha = person_id.dataNaix
+            form.initial['dataNaix'] = f"{fecha.month}/{fecha.day}/{fecha.year}"
 
     context = {"formulari":form}
     return render(request, 'registre.html', context)
