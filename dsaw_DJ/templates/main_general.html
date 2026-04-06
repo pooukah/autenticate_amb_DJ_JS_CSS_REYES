@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestió d'usuaris</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <h1>Gestió d'usuaris</h1>
+    <nav>
+        <a href="/app1/">
+            <button>INICIAR SESSIÓ</button>
+        </a>
+        <a href="/app1/users/registre/">
+            <button>CREAR NOU USUARI</button>
+        </a>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <p>Kiara Reyes Leiva - DJANGO_Fe_Be</p>
+    </footer>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!--pagina para logearse-->
+{% extends 'main_general.html' %}
+{% load static %}
+{% block content %}
+<h1>Iniciar Sessió</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ formulari }}
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <input type="submit" value="INCIAR SESSIÓ">
+</form>
+<br>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'scripts/login.js' %}"></script>
+{% endblock %}
+
+
+

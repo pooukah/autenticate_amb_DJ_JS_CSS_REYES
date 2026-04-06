@@ -1,0 +1,24 @@
+<!--pagina donde mostrara roles con botones -->
+{% extends 'main_general.html' %}
+
+{% block content %}
+    <h1>Llista d'usuaris</h1>
+        <div class="botones-rols">
+            <a href="/app1/users/rols/all"><button>TOTS</button></a>
+            <a href="/app1/users/rols/Teacher"><button>PROFESSORS</button></a>
+            <a href="/app1/users/rols/Student"><button>ESTUDIANTS</button></a>
+            <a href="/app1/users/rols/Visitant"><button>VISITANTS</button></a>
+            <a href="/app1/users/rols/Admin"><button>ADMINS</button></a>
+        </div>
+        <ul>
+            {% for persona in msg %}
+            <li>ID: {{ persona.id }}</li>
+            <li>Nombre: {{ persona.nom }}</li>
+            <li>Email: {{ persona.email }}</li>
+            <li>Rol: {{ persona.rol }}</li>
+            <a href="/app1/info/{{persona.id}}">Mes info...</a>
+            <br>
+            <br>
+            {% endfor %}
+        </ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!--pagina para registrarse / crear cuenta-->
+{% extends 'main_general.html' %}
+{% load static %}
+{% block content %}
+<h1>Formulari</h1>
+<a href="/usersApp/usuaris/">
+</a>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ formulari }}
+    <br>
+    <input type="submit" value="GUARDAR">
+</form>
+<br>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'scripts/registre.js' %}"></script>
+{% endblock %}
